@@ -1,0 +1,17 @@
+<%= form_for [@post, @post.comments.build] do |f| %>
+<!-- how these parameters are run is important
+https://stackoverflow.com/questions/18950451/rails-4-error-cant-write-unknown-attribute-html -->
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+	</p>
+	<br>
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>

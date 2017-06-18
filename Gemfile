@@ -17,10 +17,8 @@ gem 'rails', '~> 5.1.1'
 #   gem 'pg'
 # end
 
-group :production do
-  # gems specifically for Heroku go here
-  gem "pg"
-end
+gem "pg"
+
 
 gem 'rails_12factor'
 

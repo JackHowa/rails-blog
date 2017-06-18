@@ -11,7 +11,8 @@ end
 gem 'rails', '~> 5.1.1'
 
 # gem 'sqlite3'
-gem 'pg'
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 0.18'
 # gem 'taps'
 gem 'listen', '~> 3.1.5'
 

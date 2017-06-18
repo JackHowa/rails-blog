@@ -6,13 +6,16 @@ class PostsController < ApplicationController
 	end
 
 	def new # Makes a new form 
+		@post = Post.new
 	end
 
 	def create # Post route for Post
 		@post = Post.new(post_params)
-		@post.save
-
-		redirect_to @post
+		if @post.save
+			redirect_to @post
+		else
+			render 'new' # redirect would lose the flash error message
+		end
 	end 
 
 	def show

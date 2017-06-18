@@ -7,17 +7,25 @@ git_source(:github) do |repo_name|
 end
 
 
+group :production do 
+  gem 'pg', '~> 0.18'
+  gem 'rails_12factor'
+end 
+
+group :development, :test do 
+  gem 'sqlite3'
+end 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 
 # gem 'sqlite3'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+# gem 'pg', '~> 0.18'
 # gem 'taps'
 gem 'listen', '~> 3.1.5'
 
 
-gem 'rails_12factor'
+# gem 'rails_12factor'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
